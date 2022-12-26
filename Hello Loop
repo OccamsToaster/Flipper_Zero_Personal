@@ -1,6 +1,46 @@
 Add-Type -AssemblyName System.speech
 $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
 
+# a popup will be displayed before freezing the script while waiting for the cursor to move to continue the script
+# else capslock light will blink as an indicator
+$popmessage = "Hello $fullName"
+
+
+$readyNotice = New-Object -ComObject Wscript.Shell;$readyNotice.Popup($popmessage)
+
+
+# caps lock indicator light
+$blinks = 3;$o=New-Object -ComObject WScript.Shell;for ($num = 1 ; $num -le $blinks*2; $num++){$o.SendKeys("{CAPSLOCK}");Start-Sleep -Milliseconds 250}
+
+
+
+#-----------------------------------------------------------------------------------------------------------
+
+<#
+.NOTES 
+	Then the script will be paused until the mouse is moved 
+	script will check mouse position every indicated number of seconds
+	This while loop will constantly check if the mouse has been moved 
+	"CAPSLOCK" will be continuously pressed to prevent screen from turning off
+	it will then sleep for the indicated number of seconds and check again
+	when mouse is moved it will break out of the loop and continue the script
+#>
+
+
+Add-Type -AssemblyName System.Windows.Forms
+$originalPOS = [System.Windows.Forms.Cursor]::Position.X
+
+    while (1) {
+        $pauseTime = 3
+        if ([Windows.Forms.Cursor]::Position.X -ne $originalPOS){
+            break
+        }
+        else {
+            $o.SendKeys("{CAPSLOCK}");Start-Sleep -Seconds $pauseTime
+        }
+    }
+echo "it worked"
+
 for ($var = 1; $var = -1; $var++) {
 
 $speak.Speak('Hello')
