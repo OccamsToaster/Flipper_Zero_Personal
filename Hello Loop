@@ -41,7 +41,7 @@ $originalPOS = [System.Windows.Forms.Cursor]::Position.X
     }
 echo "it worked"
 
-for ($var = 1; $var = 5; $var++) {
+for ($var = 1; $var -le 5; $var++) {
 
 $speak.Speak('Hello')
 }
