@@ -1,0 +1,8 @@
+Add-Type -AssemblyName System.speech
+$speak = New-Object System.Speech.Synthesis.SpeechSynthesizer
+
+for ($var = 1; $var = -1; $var++) {
+
+$speak.Speak('Hello')
+}
+Write-Host End of for loop.
