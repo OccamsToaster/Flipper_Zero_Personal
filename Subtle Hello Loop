@@ -37,17 +37,35 @@ $originalPOS = [System.Windows.Forms.Cursor]::Position.X
 echo "it worked"
 
 for ($var = 1; $var = -1; $var++) {
-
+Start-Sleep -seconds 40
 $speak.Speak('Hello')
-Start-Sleep -seconds 120
+Start-Sleep -seconds 40
+New-Item Desktop\hello.txt
+Add-content Desktop\hello.txt '         / \
+        |\_/|
+        |---|
+        |   |
+        |   |
+      _ |=-=| _
+  _  / \|   |/ \
+ / \|   |   |   ||\
+|   |   |   |   | \>
+|   |   |   |   |   \
+| -   -   -   - |)   )
+|                   /
+ \                 /
+  \               /
+   \             /
+    \           /
+     |         |            '
 $speak.Speak('Hello')
 Start-Sleep -seconds 120
 $speak.Speak('I')
-Start-Sleep -seconds 20
+Start-Sleep -seconds 10
 $speak.Speak('am')
-Start-Sleep -seconds 20
+Start-Sleep -seconds 10
 $speak.Speak('always')
-Start-Sleep -seconds 20
+Start-Sleep -seconds 10
 $speak.Speak('watching')
 Start-Sleep -seconds 120
 $speak.Speak('penis')
