@@ -41,7 +41,7 @@ cd ..
 cd ..
 cd ..
 cd ..
-cd C:\Users\$env:USERPROFILE
+cd $env:USERPROFILE
 $var1 = 1
 $var = 1
 for ($var = $var; $var1 = 9999; $var++) {
