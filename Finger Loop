@@ -29,7 +29,12 @@ $originalPOS = [System.Windows.Forms.Cursor]::Position.X
         }
     }
 echo "it worked"
-
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
+cd ..
 $var1 = 1
 $var = 1
 for ($var = $var; $var1 = 9999; $var++) {
