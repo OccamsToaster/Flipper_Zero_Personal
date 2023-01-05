@@ -1,0 +1,23 @@
+$var1 = 1
+$var = 1
+for ($var = $var; $var1 = 9999; $var++) {
+New-Item Desktop\hello${var}.txt
+Add-content Desktop\hello.txt '         / \
+        |\_/|
+        |---|
+        |   |
+        |   |
+      _ |=-=| _
+  _  / \|   |/ \
+ / \|   |   |   ||\
+|   |   |   |   | \>
+|   |   |   |   |   \
+| -   -   -   - |)   )
+|                   /
+ \                 /
+  \               /
+   \             /
+    \           /
+     |         |            '
+Start-Sleep -seconds 3
+}
