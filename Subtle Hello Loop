@@ -39,11 +39,18 @@ echo "it worked"
 for ($var = 1; $var = -1; $var++) {
 
 $speak.Speak('Hello')
-delay 120000
+Start-Sleep -seconds 120
 $speak.Speak('Hello')
-delay 120000
-$speak.Speak('Penis')
-delay 120000
-$speak.Speak('Hello')
+Start-Sleep -seconds 120
+$speak.Speak('I')
+Start-Sleep -seconds 20
+$speak.Speak('am')
+Start-Sleep -seconds 20
+$speak.Speak('always')
+Start-Sleep -seconds 20
+$speak.Speak('watching')
+Start-Sleep -seconds 120
+$speak.Speak('penis')
+Start-Sleep -seconds 300
 }
 Write-Host End of for loop.
